@@ -2,13 +2,13 @@
 #include "Adafruit_MQTT.h"
 #include "Adafruit_MQTT_Client.h"
 
-#define WIFI_SSID "DESKTOP-16VG41C 3559"
-#define WIFI_PASS "Pass1234"
+#define WIFI_SSID "write your wifi name"
+#define WIFI_PASS "write your wifi password"
 
 #define MQTT_SERV "io.adafruit.com"
 #define MQTT_PORT 1883
-#define MQTT_NAME "akashshakya821"
-#define MQTT_PASS "aio_UiRd49E6yzyzK4oSH1a0u9q8VbtP"
+#define MQTT_NAME "write your adafruit id"
+#define MQTT_PASS "write your adafruit password"
 
 //Set up MQTT and WiFi clients
 WiFiClient client;
@@ -43,8 +43,7 @@ void setup()
 void loop()
 {
   MQTT_connect();
-  
-  //Read from our subscription queue until we run out, or
+   //Read from our subscription queue until we run out, or
   //wait up to 5 seconds for subscription to update
   Adafruit_MQTT_Subscribe * subscription;
   while ((subscription = mqtt.readSubscription(5000)))
@@ -78,23 +77,6 @@ void loop()
 }
 
 
-/***************************************************
-  Adafruit MQTT Library ESP8266 Example
-
-  Must use ESP8266 Arduino from:
-    https://github.com/esp8266/Arduino
-
-  Works great with Adafruit's Huzzah ESP board & Feather
-  ----> https://www.adafruit.com/product/2471
-  ----> https://www.adafruit.com/products/2821
-
-  Adafruit invests time and resources providing this open source code,
-  please support Adafruit and open-source hardware by purchasing
-  products from Adafruit!
-
-  Written by Tony DiCola for Adafruit Industries.
-  MIT license, all text above must be included in any redistribution
- ****************************************************/
 
 void MQTT_connect() 
 {
